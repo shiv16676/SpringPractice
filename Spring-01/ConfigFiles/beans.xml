@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	   
+	   <bean id="accObj" name="com.skumar.vnv" class="com.trafigura.tcs.Account" >
+			<constructor-arg value="Ashish Singhal"></constructor-arg>
+			<constructor-arg value="4484848"></constructor-arg>
+	   </bean>
+	   
+	   <bean id="tran" class="com.trafigura.tcs.Transaction" >
+	   		<property name="acc" ref="com.skumar.vnv"></property>
+	   </bean>
+	   
+	   <bean id="rpt" class="com.trafigura.tcs.Report">
+	   		<property name="customerList">
+	   			<list>
+	   				<bean class="com.trafigura.tcs.Customer">
+	   					<property name="name" value="Aman Giri"></property>
+	   					<property name="age" value="26"></property>
+	   					<property name="gender" value="Male"></property>
+	   				</bean>
+	   				<bean class="com.trafigura.tcs.Customer">
+	   					<property name="name" value="Ashish Baba"></property>
+	   					<property name="age" value="25"></property>
+	   					<property name="gender" value="Male"></property>
+	   				</bean>
+	   				<bean class="com.trafigura.tcs.Customer">
+	   					<property name="name" value="Mehga Gupta"></property>
+	   					<property name="age" value="22"></property>
+	   					<property name="gender" value="female"></property>
+	   				</bean>
+	   			</list>
+	   		</property>
+	   </bean>
+	   
+</beans>
