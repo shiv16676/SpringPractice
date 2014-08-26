@@ -29,4 +29,8 @@ public class Account {
 		System.out.println("Welcome:" + getAccHolder() + " Your account number is :" + getAccno());
 	}
 
+	private void sysout() {
+		// TODO Auto-generated method stub
+
+	}
 }
